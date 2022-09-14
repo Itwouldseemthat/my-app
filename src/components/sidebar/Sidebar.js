@@ -3,7 +3,7 @@ import './Sidebar.css';
 
 const Sidebar = () => {
     return (
-        <div className="sidebar">
+        <div className="sidebar background">
             <div className="user-profile">
                 <img className="userpic" src="https://resheto.net/images/mater/pozitivnye_kartinki_2.jpg"></img>
                 <div className="userName">
