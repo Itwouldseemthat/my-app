@@ -32,7 +32,7 @@ const Chart = () => {
             data: [1, 2, 3, 5, 3, 1, 1, 2, 4, 4, 4, 5, 1, 1, 1, 2, 1, 3, 4],
             label: "feeling",
             borderColor: "blue",
-            fill: true,
+            fill: "true",
             lineTension: 0.5,
           },
         ]
@@ -42,11 +42,11 @@ const Chart = () => {
       plugins: {
         title: {
           display: true,
-          text: "COVID-19 Cases of Last 6 Months",
+          text: "September 2022",
           fontSize: 20
         },
         legend: {
-          display: true, //Is the legend shown?
+          display: false, //Is the legend shown?
           position: "bottom" //Position of the legend.
         }
       }
@@ -54,6 +54,7 @@ const Chart = () => {
 
     return (
         <Line
+          className="chart"
           type="line"
           width={160}
           height={60}

@@ -1,3 +1,69 @@
 .maincontent {
     width: 800px;
 }
+
+.statistic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.bgstat {
+    padding: 20px;
+}
+
+.following {
+    box-shadow: 6px 0px 5px -5px rgba(34, 60, 80, 0.362) inset;
+    padding: 20px 20px 20px 65px;
+}
+.empathy {
+    box-shadow: 6px 0px 5px -5px rgba(34, 60, 80, 0.362) inset;
+    padding: 20px 20px 20px 65px;
+}
+
+.lane2 {
+    padding-top: 0.5px;
+    margin: 12px 0px 10px 0px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.489);
+}
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.postButtons {
+    display: flex;
+    gap: 2px;
+}
+.postBtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.addPost {
+    padding: 4px 10px 4px 15px;
+    background: linear-gradient(320deg, rgba(105,200,215,1) 46%, rgba(35,254,225,1) 98%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 6px 4px 8px -5px rgba(34, 60, 80, 0.8);
+}
+.settingsPost {
+    padding: 4px 15px 4px 10px;
+    background: linear-gradient(320deg, rgba(50,104,168,1) 0%, rgba(105,200,215,1) 46%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: -6px 4px 8px -5px rgba(34, 60, 80, 0.8);
+}
+
+.addPost:hover {
+    background: linear-gradient(320deg, rgba(105,200,215,1) 46%, rgba(50,104,168,1) 98%);
+    cursor: pointer;
+}
+
+.settingsPost:hover {
+    background: linear-gradient(320deg, rgba(35,254,225,1) 0%, rgba(105,200,215,1) 46%);
+    cursor: pointer;
+}
