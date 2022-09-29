@@ -1,0 +1,33 @@
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.whoPosting {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.microImg {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+}
+
+.postAutor {
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.timeOfPost {
+    align-items: center;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 13px;
+}

@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgba(222, 235, 240, 0.359);
+    padding-bottom: 30px;
 }
 div {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

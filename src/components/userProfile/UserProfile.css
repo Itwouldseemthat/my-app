@@ -1,3 +1,9 @@
+.background {
+    padding: 20px;
+    background-color: rgba(115, 163, 210, 0.103);
+    border-radius: 10px;
+}
+
 .userpic {
     width: 200px;
     display: flex;
@@ -39,7 +45,7 @@
     border: 1px solid rgba(0, 0, 0, 0.489);
 }
 
-.edit-profile {
+.sidebarBtn {
     width: 200px;
     display: flex;
     margin: 0 auto;

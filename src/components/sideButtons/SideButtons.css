@@ -1,0 +1,28 @@
+.sideButtons {
+    margin-top: 20px;
+}
+
+
+
+.sideBtn {
+    width: 200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 16px;
+    padding: 5px 0px;
+    margin-top: 20px;
+    background: linear-gradient(345deg,rgba(50, 103, 168, 0.499) 0%, rgba(105, 200, 215, 0.499) 36%, rgba(35, 254, 225, 0.499) 98%);
+    border: none;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    outline: none;
+}
+
+.feelSettings {
+    margin-top: 0px;
+}
+
+.sideBtn:hover {
+    background: linear-gradient(345deg,rgba(50,104,168,1) 0%, rgba(105,200,215,1) 36%, rgba(35,254,225,1) 98%);
+    cursor: pointer;
+}
