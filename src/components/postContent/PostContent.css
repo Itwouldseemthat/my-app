@@ -6,7 +6,6 @@
     border: 2px solid transparent;
     border-image: linear-gradient(345deg,rgba(50,104,168,1) 0%,  rgba(105,200,215,1) 36%, rgba(35,254,225,1) 98%);
     border-image-slice: 1;
-    border-radius: 20px;
     background-color: rgb(243, 246, 247);
     margin-bottom: 0px;
 }

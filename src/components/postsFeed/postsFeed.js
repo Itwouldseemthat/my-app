@@ -6,7 +6,7 @@ import Post from "../post/post";
 
 const PostsFeed = () => {
     return (
-        <div className="postsFeed background">
+        <div className="postsFeed posts-background">
             <Post />
         </div>
     )
