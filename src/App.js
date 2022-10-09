@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
-import Sidebar from "./components/sidebar/Sidebar";
-import Maincontent from "./components/maincontent/Maincontent";
-import Header from "./components/header/Header";
+import MainPage from "./MainPage";
+
+import CreatePost from "./components/createPost/CreatePost";
 
 function App() {
+    const [state, setState] = useState(false);
+
+
+    let boolean = state;
+
+    function clickOnCreatePost() {
+        boolean = true;
+        console.log(boolean)
+        setState(boolean);
+    }
+
+    function clickOnExitCreatePost() {
+        boolean = false;
+        console.log(boolean)
+        setState(boolean);
+    }
+
+
     return (
         <div className="app">
-            <Header />
-            <div className="container">
-                <div className="content-wrapper">
-                  <Sidebar />
-                  <Maincontent /> 
-                </div>
-            </div>
+            {boolean && <CreatePost clickOnExitCreatePost={clickOnExitCreatePost} />}
+            <MainPage clickOnCreatePost={clickOnCreatePost} />   
         </div>
     )
 }

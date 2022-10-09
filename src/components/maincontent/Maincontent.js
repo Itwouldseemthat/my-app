@@ -4,12 +4,12 @@ import Management from "../managment/Managnement";
 import PostsFeed from "../postsFeed/postsFeed";
 import './Maincontent.css';
 
-const Maincontent = () => {
+const Maincontent = (props) => {
     return (
         <div className="maincontent">
             <div className="background">
                 <Chart />
-                <Management />
+                <Management onClick={props.onClick}/>
             </div>
             <PostsFeed />
         </div>

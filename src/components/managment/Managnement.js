@@ -3,12 +3,12 @@ import Control from "../control/Control";
 import Statistic from "../statistic/Statistic";
 
 
-const Management = () => {
+const Management = (props) => {
     return (
         <div className="management">
             <Statistic />
             <div className="lane2"></div>
-            <Control />
+            <Control onClick={props.onClick}/>
         </div>
     )
 }
