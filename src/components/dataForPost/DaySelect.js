@@ -28,9 +28,13 @@ const DaySelect = (props) => {
 
     let array = getDays(dayInMonth[props.valueFormMonth]);
 
+    function getDate() {
+        let date = new Date();
+        console.log(date.getMonth())
+    }
 
     return (
-        <select name="DaySelect" value={props.valueFormDay} onChange={(event) => props.onChange(event.target.value)}>
+        <select onClick={getDate} name="DaySelect" value={props.valueFormDay} onChange={(event) => props.onChange(event.target.value)}>
             {
                 array.map(item => (
                     <option key={item} value={item}>{item}</option>
