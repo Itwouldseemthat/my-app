@@ -22,11 +22,21 @@ function App() {
         setState(boolean);
     }
 
+    const [arrWithForms, setArrWithForms] = useState([]);
+    
+
+    function addInfoAboutPost(event, form) {
+        event.preventDefault();
+        arrWithForms.unshift(form);
+        setArrWithForms(arrWithForms);
+        clickOnExitCreatePost();
+        console.log(arrWithForms);
+    }
 
     return (
         <div className="app">
-            {boolean && <CreatePost clickOnExitCreatePost={clickOnExitCreatePost} />}
-            <MainPage clickOnCreatePost={clickOnCreatePost} />   
+            {boolean && <CreatePost clickOnExitCreatePost={clickOnExitCreatePost} onSubmit={addInfoAboutPost} />}
+            <MainPage arrWithForms={arrWithForms} clickOnCreatePost={clickOnCreatePost} />   
         </div>
     )
 }

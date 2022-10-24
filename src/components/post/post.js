@@ -8,12 +8,22 @@ import PostHeader from "../postHeader/PostHeader";
 import PostStatistic from "../postStatistic/PostStatistic";
 
 
-const Post = () => {
+const Post = (props) => {
+
+
     return (
-        <div className="post">
-            <PostHeader />
-            <PostContent text="tralival"/>
-            <PostStatistic />
+        <div className="post posts-background">
+            <PostHeader 
+                isPrivate={props.isPrivate} 
+                day={props.day}
+                month={props.month}
+                time={props.time}
+            />
+            <PostContent text={props.text}/>
+            <PostStatistic 
+                iconEmpathy={props.iconEmpathy}
+                addPointToAllEmpathy={props.addPointToAllEmpathy}
+            />
         </div>
     )
 }

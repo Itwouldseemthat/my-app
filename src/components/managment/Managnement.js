@@ -6,7 +6,7 @@ import Statistic from "../statistic/Statistic";
 const Management = (props) => {
     return (
         <div className="management">
-            <Statistic />
+            <Statistic allEmpathy={props.allEmpathy} />
             <div className="lane2"></div>
             <Control onClick={props.onClick}/>
         </div>

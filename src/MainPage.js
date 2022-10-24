@@ -12,8 +12,11 @@ const MainPage = (props) => {
             <Header />
             <div className="container">
                 <div className="content-wrapper">
-                  <Sidebar />
-                  <Maincontent onClick={props.clickOnCreatePost} /> 
+                    <Sidebar />
+                    <Maincontent 
+                        arrWithForms={props.arrWithForms} 
+                        onClick={props.clickOnCreatePost}
+                    /> 
                 </div>
             </div>
         </div>
