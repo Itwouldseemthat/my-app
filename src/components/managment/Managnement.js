@@ -8,7 +8,7 @@ const Management = (props) => {
         <div className="management">
             <Statistic allEmpathy={props.allEmpathy} />
             <div className="lane2"></div>
-            <Control onClick={props.onClick}/>
+            <Control onClick={props.onClick} arrWithForms={props.arrWithForms}/>
         </div>
     )
 }

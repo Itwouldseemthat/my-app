@@ -28,7 +28,11 @@ const Maincontent = (props) => {
         <div className="maincontent">
             <div className="background">
                 <Chart />
-                <Management onClick={props.onClick} allEmpathy={allEmpathy}/>
+                <Management 
+                    onClick={props.onClick} 
+                    allEmpathy={allEmpathy}
+                    arrWithForms={props.arrWithForms}
+                />
             </div>
             <PostsFeed 
                 arrWithForms={props.arrWithForms}

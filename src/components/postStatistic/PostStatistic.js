@@ -17,13 +17,6 @@ const PostStatistic = (props) => {
         repost: 0,
     })
 
-    // function clickOnLike() {
-    //     setStatistic({
-    //         ...statistic,
-    //         iconEmpathy: likee,
-    //     })
-    //     console.log(statistic)
-    // }
 
     function clickOnLike() {
         if (statistic.iconEmpathy === noneLiked) {
