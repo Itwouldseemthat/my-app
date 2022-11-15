@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -10,6 +10,10 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+
+
+
+
 
 ChartJS.register(
   CategoryScale,
@@ -36,6 +40,14 @@ const ChartForSettings = (props) => {
     };
 
     const options = {
+      onClick: (e, activeEls) => {
+        let datasetIndex = activeEls[0].datasetIndex;
+        let dataIndex = activeEls[0].index;
+        let datasetLabel = e.chart.data.datasets[datasetIndex].label;
+        let value = e.chart.data.datasets[datasetIndex].data[dataIndex];
+        let label = e.chart.data.labels[dataIndex];
+        console.log("In click", datasetLabel, label, value);
+      },
       plugins: {
         title: {
           display: true,
