@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import './Main.css';
+import './Home.css';
 import MainPage from "./MainPage";
 
 import CreatePost from "./components/createPost/CreatePost";
 
-function Main() {
+function Home() {
     const [state, setState] = useState(false);
 
 
@@ -41,4 +41,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default Home;
