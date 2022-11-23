@@ -8,7 +8,7 @@ const UserProfile = () => {
             <div className="userName">
                 <div className="name">Никита Цуканов</div>
                 <div className="login">@itwouldseemthat</div>
-                <div className="birthsday"><span className="bd">День рождения: </span>23 сентября 2000</div>
+                <div className="birthsday"><a className="bd">День рождения: </a>23 сентября 2000</div>
             </div>
             <div className="lane"></div>
             <button className="edit-profile sidebarBtn" type="submit">Edit profile</button>

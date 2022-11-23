@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -13,8 +13,6 @@ import {
 
 
 
-
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -26,18 +24,6 @@ ChartJS.register(
 );
 
 const ChartForSettings = (props) => {
-    const lineChartData = {
-        labels: props.days,
-        datasets: [
-          {
-            data: [1, 2, 3, 5, 3, 1, 1, 2, 4, 4, 4, 5, 1, 1, 1, 2, 1, 3, 4],
-            label: "feeling",
-            borderColor: "blue",
-            fill: "true",
-            lineTension: 0.5,
-          },
-        ]
-    };
 
     const options = {
       onClick: (e, activeEls) => {
@@ -60,7 +46,7 @@ const ChartForSettings = (props) => {
         }
       }
     }
-
+    
     return (
         <Line
           className="chart"
@@ -68,7 +54,7 @@ const ChartForSettings = (props) => {
           width={160}
           height={60}
           options={options}
-          data={lineChartData}
+          data={props.lineChartData}
           color="#f0f"
         />
     )

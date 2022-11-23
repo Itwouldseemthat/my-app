@@ -16,6 +16,7 @@ const MainPage = (props) => {
                     <Maincontent 
                         arrWithForms={props.arrWithForms} 
                         onClick={props.clickOnCreatePost}
+                        lineChartData={props.lineChartData}
                     /> 
                 </div>
             </div>

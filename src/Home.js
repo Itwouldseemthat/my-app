@@ -4,22 +4,16 @@ import MainPage from "./MainPage";
 
 import CreatePost from "./components/createPost/CreatePost";
 
-function Home() {
+function Home(props) {
     const [state, setState] = useState(false);
 
 
-    let boolean = state;
-
     function clickOnCreatePost() {
-        boolean = true;
-        console.log(boolean)
-        setState(boolean);
+        setState(true);
     }
 
     function clickOnExitCreatePost() {
-        boolean = false;
-        console.log(boolean)
-        setState(boolean);
+        setState(false);
     }
 
     const [arrWithForms, setArrWithForms] = useState([]);
@@ -35,8 +29,12 @@ function Home() {
 
     return (
         <div className="main">
-            {boolean && <CreatePost clickOnExitCreatePost={clickOnExitCreatePost} onSubmit={addInfoAboutPost} />}
-            <MainPage arrWithForms={arrWithForms} clickOnCreatePost={clickOnCreatePost} />   
+            {state && <CreatePost clickOnExitCreatePost={clickOnExitCreatePost} onSubmit={addInfoAboutPost} />}
+            <MainPage 
+                arrWithForms={arrWithForms}
+                clickOnCreatePost={clickOnCreatePost}
+                lineChartData={props.lineChartData}
+            />   
         </div>
     )
 }

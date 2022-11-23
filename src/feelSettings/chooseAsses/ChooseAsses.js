@@ -2,57 +2,59 @@ import React from "react";
 import './ChooseAsses.css';
 
 const ChooseAsses = (props) => {
+
+
     return (
         <div className="radio-asses">
-            <label>
+            <label className="labelAsses">
                 <input 
                     type="radio" 
                     name="asses"
-                    className="radio-btn"
+                    className="btnAsses"
                     value={props.asses}
                     onChange={() => props.onChange(5)}
                 />
-            Otlichno
+                <span>Otlichno</span>
             </label>
-            <label>
+            <label className="labelAsses">
                 <input 
                     type="radio" 
                     name="asses"
-                    className="radio-btn"
+                    className="btnAsses"
                     value={props.asses}
                     onChange={() => props.onChange(4)}
                 />
-            good
+                <span>good</span>
             </label>
-            <label>
-                <input 
+            <label className="labelAsses">
+                <input
                     type="radio" 
                     name="asses"
-                    className="radio-btn"
+                    className="btnAsses"
                     value={props.asses}
                     onChange={() => props.onChange(3)}
                 />
-            apatiya
+                <span>apatiya</span>
             </label>
-            <label>
+            <label className="labelAsses">
                 <input 
                     type="radio" 
                     name="asses"
-                    className="radio-btn"
+                    className="btnAsses"
                     value={props.asses}
                     onChange={() => props.onChange(2)}
                 />
-            not good
+                <span>not good</span>
             </label>
-            <label>
+            <label className="labelAsses">
                 <input 
                     type="radio" 
                     name="asses"
-                    className="radio-btn"
+                    className="btnAsses"
                     value={props.asses}
                     onChange={() => props.onChange(1)}
                 />
-            i wanna die
+                <span>i wanna die</span>
             </label>
         </div>
     )
