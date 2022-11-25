@@ -12,6 +12,7 @@ const ChartAndPosts = (props) => {
                 year={date.getFullYear()}
                 datasets={props.datasets}
                 lineChartData={props.lineChartData}
+                daysChartLabel={props.daysChartLabel}
             /> 
         </div>
     )

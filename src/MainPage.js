@@ -14,7 +14,8 @@ const MainPage = (props) => {
                 <div className="content-wrapper">
                     <Sidebar />
                     <Maincontent 
-                        arrWithForms={props.arrWithForms} 
+                        arrWithForms={props.arrWithForms}
+                        daysChartLabel={props.daysChartLabel} 
                         onClick={props.clickOnCreatePost}
                         lineChartData={props.lineChartData}
                     /> 

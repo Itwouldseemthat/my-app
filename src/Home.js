@@ -32,6 +32,7 @@ function Home(props) {
             {state && <CreatePost clickOnExitCreatePost={clickOnExitCreatePost} onSubmit={addInfoAboutPost} />}
             <MainPage 
                 arrWithForms={arrWithForms}
+                daysChartLabel={props.daysChartLabel}
                 clickOnCreatePost={clickOnCreatePost}
                 lineChartData={props.lineChartData}
             />   

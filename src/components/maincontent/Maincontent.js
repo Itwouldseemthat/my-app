@@ -27,7 +27,7 @@ const Maincontent = (props) => {
     return (
         <div className="maincontent">
             <div className="background">
-                <Chart lineChartData={props.lineChartData}/>
+                <Chart lineChartData={props.lineChartData} daysChartLabel={props.daysChartLabel}/>
                 <Management 
                     onClick={props.onClick} 
                     allEmpathy={allEmpathy}

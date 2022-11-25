@@ -24,6 +24,18 @@ ChartJS.register(
 );
 
 const ChartForSettings = (props) => {
+    const data = {
+      labels: props.daysChartLabel,
+      datasets: [
+        {
+          data: props.lineChartData,
+          label: "feeling",
+          borderColor: "blue",
+          fill: "true",
+          lineTension: 0.5,
+        },
+      ]
+    }
 
     const options = {
       onClick: (e, activeEls) => {
@@ -54,7 +66,7 @@ const ChartForSettings = (props) => {
           width={160}
           height={60}
           options={options}
-          data={props.lineChartData}
+          data={data}
           color="#f0f"
         />
     )

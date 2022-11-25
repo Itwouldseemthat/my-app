@@ -4,6 +4,10 @@
     margin-bottom: 8px;
 }
 
+.border {
+    border: 5px solid red;
+}
+
 .calendar header button,
 .calendar header select {
     margin: 0 4px;
@@ -27,6 +31,18 @@
     vertical-align: middle;
     text-align: center;
     border: 2px solid transparent;
+}
+
+.today {
+    padding: 4px 8px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid rgb(50, 211, 255)
+}
+
+.today:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
 }
 
 .calendar .day:hover {

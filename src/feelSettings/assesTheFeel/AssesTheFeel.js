@@ -18,7 +18,7 @@ const AssesTheFeel = (props) => {
                 <a className="title-asses">How did you feel on</a>
                 <a className="title-asses">{props.monthAsses} {props.dayAsses}?</a>
             </div>
-            <form className="asses" onSubmit={(event) => props.onSubmitAssesForm(event, asses)}>
+            <form className="asses" onSubmit={(event) => props.onSubmitAssesForm(event, asses, props.dayAsses)}>
                 <ChooseAsses onChange={ConfirmAsses} asses={asses}/>
                 <input type='submit' value='confirm' className="addPostBtn" />
             </form>
