@@ -11,7 +11,7 @@ const Calendar = (props) => {
                 <button>{'<'}</button>
 
                 <select></select>
-
+                {new Date().toLocaleString('en-US', {month: 'long'})}
                 <select></select>
 
                 <button>{'>'}</button>

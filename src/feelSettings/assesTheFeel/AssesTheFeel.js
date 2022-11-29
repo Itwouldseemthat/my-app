@@ -7,10 +7,19 @@ const AssesTheFeel = (props) => {
 
     const [asses, setAsses] = useState()
 
+    const [isDisabled, setIsDisabled] = useState(true)
+
     function ConfirmAsses(num) {
         setAsses(num);
         console.log(asses);
+        setIsDisabled(false);
     }
+
+    function backToCalendar() {
+        props.setShowCalendar(true)
+    }
+
+
 
     return (
         <div className="background assesBlock">
@@ -20,8 +29,9 @@ const AssesTheFeel = (props) => {
             </div>
             <form className="asses" onSubmit={(event) => props.onSubmitAssesForm(event, asses, props.dayAsses)}>
                 <ChooseAsses onChange={ConfirmAsses} asses={asses}/>
-                <input type='submit' value='confirm' className="addPostBtn" />
+                <input type='submit' value='confirm' className="addPostBtn" disabled={isDisabled}/>
             </form>
+            <button type="submit" className="backToCalendar" onClick={backToCalendar}>back</button>
         </div>
     )
 }

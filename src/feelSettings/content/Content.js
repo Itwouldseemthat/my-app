@@ -1,47 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Content.css';
-import AssesTheFeel from "../assesTheFeel/AssesTheFeel";
 import ChartAndPosts from "../ChartAndPosts/ChartAndPosts";
-import Calendar from '../calendar/Calendar';
+import Sidebar from "../sidebarFeelPage/Sidebar";
 
 
 const Content = (props) => {
 
-    const [dataAsses, setDataAsses] = useState(
-        {
-            day: new Date().getDate(),
-            month: new Date().toLocaleString('en-US', {month: 'long'}),
-        }
-    )
+    const [dataForPostsFeed, setDataForPostsFeed] = useState(new Date().getDate())
 
-    function ChooseDataForAsses(elem) {
-        console.log(elem.target)
-        let dayForData = elem.target.getAttribute('value');
-        setDataAsses({
-            ...dataAsses,
-            day: dayForData,
-        })
-        props.setShowCalendar(false)
-    }
-
-    
 
     return (
         <div className="content">
-            {props.showCalendar ? 
-            <Calendar 
+            <Sidebar
+                setDataForPostsFeed={setDataForPostsFeed} 
+                showCalendar={props.showCalendar}
+                setShowCalendar={props.setShowCalendar}
                 daysInMonth={props.daysInMonth}
-                ChooseDataForAsses={ChooseDataForAsses}
-                dayAsses={dataAsses.day}
-            />
-            :
-            <AssesTheFeel 
                 onSubmitAssesForm={props.onSubmitAssesForm}
-                dayAsses={dataAsses.day}
-                monthAsses={dataAsses.month}
             />
-            }
-            <ChartAndPosts lineChartData={props.lineChartData} daysChartLabel={props.daysChartLabel}/>
+            <ChartAndPosts
+                setDataForPostsFeed={setDataForPostsFeed}
+                dataForPostsFeed={dataForPostsFeed}
+                lineChartData={props.lineChartData} 
+                daysChartLabel={props.daysChartLabel}
+                arrWithForms={props.arrWithForms}
+            />
         </div>
     )
 }

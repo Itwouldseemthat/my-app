@@ -25,7 +25,6 @@ const CreatePost = (props) => {
             ...form,
             isPrivate: bool,
         })
-        console.log("isPrivate", form.isPrivate)
     }
 
 
@@ -34,15 +33,13 @@ const CreatePost = (props) => {
             ...form,
             month: monthSelect,
         })
-        console.log(form);
     }
 
     function selectDay(daySelect) {
         setForm({
             ...form,
-            day: daySelect,
+            day: new Date(new Date().getFullYear(), new Date().getMonth(), daySelect).getDate(),
         })
-        console.log(form);
     }
 
     function EnterText(textarea) {
@@ -67,7 +64,7 @@ const CreatePost = (props) => {
                 <TextForPost form={form.text} onChange={EnterText} />  
                 <AddPostBtn />
             </form>
-            <button type="submit" onClick={props.clickOnExitCreatePost}>закрыть</button>
+            <button type="submit" onClick={() => props.showCreatePostModal(false)}>закрыть</button>
         </div>
     )
 }

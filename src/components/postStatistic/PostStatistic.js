@@ -33,10 +33,8 @@ const PostStatistic = (props) => {
                 countEmpathy: statistic.countEmpathy - 1,
             })
         }
-        console.log("click")
     }
 
-    console.log("old", statistic)
     return (
         <div className="postStatistic">
             <Comment />

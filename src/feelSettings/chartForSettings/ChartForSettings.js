@@ -39,12 +39,12 @@ const ChartForSettings = (props) => {
 
     const options = {
       onClick: (e, activeEls) => {
-        let datasetIndex = activeEls[0].datasetIndex;
+        // let datasetIndex = activeEls[0].datasetIndex;
         let dataIndex = activeEls[0].index;
-        let datasetLabel = e.chart.data.datasets[datasetIndex].label;
-        let value = e.chart.data.datasets[datasetIndex].data[dataIndex];
+        // let datasetLabel = e.chart.data.datasets[datasetIndex].label;
+        // let value = e.chart.data.datasets[datasetIndex].data[dataIndex];
         let label = e.chart.data.labels[dataIndex];
-        console.log("In click", datasetLabel, label, value);
+        props.setDataForPostsFeed(label)
       },
       plugins: {
         title: {
@@ -60,8 +60,8 @@ const ChartForSettings = (props) => {
     }
     
     return (
+      <div className="background chart">
         <Line
-          className="chart"
           type="line"
           width={160}
           height={60}
@@ -69,6 +69,7 @@ const ChartForSettings = (props) => {
           data={data}
           color="#f0f"
         />
+      </div>
     )
 }
 

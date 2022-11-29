@@ -29,7 +29,7 @@ const Maincontent = (props) => {
             <div className="background">
                 <Chart lineChartData={props.lineChartData} daysChartLabel={props.daysChartLabel}/>
                 <Management 
-                    onClick={props.onClick} 
+                    showCreatePostModal={props.showCreatePostModal} 
                     allEmpathy={allEmpathy}
                     arrWithForms={props.arrWithForms}
                 />

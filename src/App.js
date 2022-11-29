@@ -79,7 +79,7 @@ const App = () => {
       ...newData
     ])
 
-    onClick(day);
+    onClick(day, asses);
 
     setShowCalendar(true);
   }
@@ -146,31 +146,67 @@ const App = () => {
 
   const [daysInMonth, setDaysInMonth] = useState(getArrWithDays())
 
+  let colorForAsses = {
+    5: 'rgba(248, 248, 82, 0.797)',
+    4: 'rgba(243, 200, 61, 0.797)',
+    3: 'rgba(82, 135, 248, 0.797)',
+    2: 'rgba(240, 101, 37, 0.797)',
+    1: 'rgba(232, 63, 63, 0.797)',
+  }
 
-
-  function onClick(num) {
+  function onClick(num, asses) {
       let data = new Date(new Date().getFullYear(), new Date().getMonth(), num)
-      console.log(num)
       daysInMonth.forEach(week => {
           week.forEach(objDay => {
               if (objDay !== undefined) {
                   if (Object.values(objDay)[0] === data.getDate()) {
-                      objDay.background = 'rgba(82, 135, 248, 0.797)';
+                    console.log(Object.values(objDay)[0], data.getDate())
+                      objDay.background = colorForAsses[asses]
                   } 
               }
           })
       })
     setDaysInMonth([...daysInMonth]);
-    console.log(daysInMonth)
   }
-//======================== calendar functions
 
   const [showCalendar, setShowCalendar] = useState(true)
+//======================== calendar functions
+//======================== Home page functions
+
+const [showModal, setShowModal] = useState(false);
+
+
+function showCreatePostModal(bool) {
+    setShowModal(bool)
+}
+
+
+const [arrWithForms, setArrWithForms] = useState([]);
+
+
+function addInfoAboutPost(event, form) {
+    event.preventDefault();
+    arrWithForms.unshift(form);
+    setArrWithForms(arrWithForms);
+    showCreatePostModal(false);
+    console.log(arrWithForms);
+}
+
+//======================== Home page functions
 
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home lineChartData={lineChartData} daysChartLabel={days} />} exact />
+        <Route 
+          path="/" 
+          element={<Home 
+                      lineChartData={lineChartData} 
+                      daysChartLabel={days} 
+                      showModal={showModal}
+                      showCreatePostModal={showCreatePostModal}
+                      addInfoAboutPost={addInfoAboutPost}
+                      arrWithForms={arrWithForms}
+                    />} exact />
         <Route 
           path="/chart" 
           element={<FeelSettings
@@ -180,6 +216,7 @@ const App = () => {
                       lineChartData={lineChartData}
                       daysChartLabel={days}
                       onSubmitAssesForm={addAssesToChart}
+                      arrWithForms={arrWithForms}
                   />} 
         />
       </Routes>

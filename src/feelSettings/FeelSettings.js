@@ -17,6 +17,7 @@ const FeelSettings = (props) => {
                 lineChartData={props.lineChartData}
                 daysChartLabel={props.daysChartLabel}
                 onSubmitAssesForm={props.onSubmitAssesForm}
+                arrWithForms={props.arrWithForms}
             />
         </div>
     )

@@ -5,35 +5,14 @@ import MainPage from "./MainPage";
 import CreatePost from "./components/createPost/CreatePost";
 
 function Home(props) {
-    const [state, setState] = useState(false);
-
-
-    function clickOnCreatePost() {
-        setState(true);
-    }
-
-    function clickOnExitCreatePost() {
-        setState(false);
-    }
-
-    const [arrWithForms, setArrWithForms] = useState([]);
-    
-
-    function addInfoAboutPost(event, form) {
-        event.preventDefault();
-        arrWithForms.unshift(form);
-        setArrWithForms(arrWithForms);
-        clickOnExitCreatePost();
-        console.log(arrWithForms);
-    }
 
     return (
         <div className="main">
-            {state && <CreatePost clickOnExitCreatePost={clickOnExitCreatePost} onSubmit={addInfoAboutPost} />}
+            {props.showModal && <CreatePost showCreatePostModal={props.showCreatePostModal} onSubmit={props.addInfoAboutPost} />}
             <MainPage 
-                arrWithForms={arrWithForms}
+                arrWithForms={props.arrWithForms}
                 daysChartLabel={props.daysChartLabel}
-                clickOnCreatePost={clickOnCreatePost}
+                showCreatePostModal={props.showCreatePostModal}
                 lineChartData={props.lineChartData}
             />   
         </div>

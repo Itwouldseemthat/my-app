@@ -6,7 +6,7 @@ const Control = (props) => {
         <div className="control">
             <div className="countPosts">Posts: {props.arrWithForms.length}</div>
             <div className="postButtons">
-                <button type="submit" className="addPost postBtn" onClick={props.onClick}>+</button>
+                <button type="submit" className="addPost postBtn" onClick={() => props.showCreatePostModal(true)}>+</button>
                 <button type="submit" className="settingsPost postBtn">-</button>
             </div>
             

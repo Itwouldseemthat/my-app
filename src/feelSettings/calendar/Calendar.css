@@ -1,3 +1,7 @@
+.calendar {
+    height: 432px;
+}
+
 .calendar header {
     display: flex;
     justify-content: center;

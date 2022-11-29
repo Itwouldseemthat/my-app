@@ -16,7 +16,7 @@ const MainPage = (props) => {
                     <Maincontent 
                         arrWithForms={props.arrWithForms}
                         daysChartLabel={props.daysChartLabel} 
-                        onClick={props.clickOnCreatePost}
+                        showCreatePostModal={props.showCreatePostModal}
                         lineChartData={props.lineChartData}
                     /> 
                 </div>

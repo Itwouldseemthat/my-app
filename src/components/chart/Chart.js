@@ -40,7 +40,7 @@ const Chart = (props) => {
       plugins: {
         title: {
           display: true,
-          text: "September 2022",
+          text: `${new Date().toLocaleString('en-US', {month: 'long'})} ${new Date().getFullYear()}`,
           fontSize: 20
         },
         legend: {
