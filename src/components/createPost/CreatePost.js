@@ -49,10 +49,16 @@ const CreatePost = (props) => {
         })
     }
 
+    function ExitModal(e) {
+        if (e.target.className === 'createPost-wrapper') {
+            props.showCreatePostModal(false)
+        }
+    }
+
 
 
     return (
-        <div className="createPost-wrapper">
+        <div onClick={(e) => ExitModal(e)} className="createPost-wrapper">
             <form className="createPost" onSubmit={(event) => props.onSubmit(event, form)}>
                 <Instructions 
                     form={form}
@@ -64,7 +70,6 @@ const CreatePost = (props) => {
                 <TextForPost form={form.text} onChange={EnterText} />  
                 <AddPostBtn />
             </form>
-            <button type="submit" onClick={() => props.showCreatePostModal(false)}>закрыть</button>
         </div>
     )
 }

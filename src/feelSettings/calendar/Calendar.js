@@ -1,4 +1,4 @@
-import React,{ useState }  from "react";
+import React from "react";
 import './Calendar.css';
 
 const Calendar = (props) => {
@@ -8,13 +8,7 @@ const Calendar = (props) => {
     return (
         <div className="calendar background">
             <header>
-                <button>{'<'}</button>
-
-                <select></select>
                 {new Date().toLocaleString('en-US', {month: 'long'})}
-                <select></select>
-
-                <button>{'>'}</button>
             </header>
             <table>
                 <thead>
