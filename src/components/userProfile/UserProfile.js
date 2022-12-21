@@ -1,10 +1,11 @@
 import React from "react";
 import './UserProfile.css';
+import userPic from "../../icons/pozitivnye_kartinki_2.jpg";
 
 const UserProfile = () => {
     return (
         <div className="user-profile background">
-            <img className="userpic" src="https://resheto.net/images/mater/pozitivnye_kartinki_2.jpg"></img>
+            <img className="userpic" src={userPic}></img>
             <div className="userName">
                 <div className="name">Никита Цуканов</div>
                 <div className="login">@itwouldseemthat</div>
