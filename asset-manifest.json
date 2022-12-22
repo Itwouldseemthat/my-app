@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/my-app/static/css/main.aceb0a52.css",
-    "main.js": "/my-app/static/js/main.1d48220a.js",
+    "main.js": "/my-app/static/js/main.93b08ad3.js",
     "static/media/pozitivnye_kartinki_2.jpg": "/my-app/static/media/pozitivnye_kartinki_2.19108967af9a62b77256.jpg",
     "static/media/love.png": "/my-app/static/media/love.e4ffc7816448cc0e4475.png",
     "static/media/heart.png": "/my-app/static/media/heart.556c78a5a9b89d6b2eeb.png",
     "index.html": "/my-app/index.html",
     "main.aceb0a52.css.map": "/my-app/static/css/main.aceb0a52.css.map",
-    "main.1d48220a.js.map": "/my-app/static/js/main.1d48220a.js.map"
+    "main.93b08ad3.js.map": "/my-app/static/js/main.93b08ad3.js.map"
   },
   "entrypoints": [
     "static/css/main.aceb0a52.css",
-    "static/js/main.1d48220a.js"
+    "static/js/main.93b08ad3.js"
   ]
 }
